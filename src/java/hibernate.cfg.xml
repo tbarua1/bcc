@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bht?useSSL=false</property>
+    <!--<property name="hibernate.connection.requireSSL">true</property>-->
+    <!--<property name="hibernate.connection.autoReconnect">true</property>-->
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">aaaAAA123</property>
+    <property name="hibernate.hbm2ddl.auto">create</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.jdbc.batch_size 20">20</property>
+      <!--<property name="hibernate.connection.pool_size">10</property>--> 
+  <!--<property name="show_sql">true</property>--> 
+    <!--<property name="hibernate.connection.pool_size">500</property>-->
+    <!--<property name="hibernate.connection.release_mode">on_close</property>-->
+    <!--<property name="c3p0.timeout">1</property>-->
+    <mapping class="com.tarkesh.entity.CompletedTraining"/>
+    <mapping class="com.tarkesh.entity.Organizations"/>
+    <mapping class="com.tarkesh.entity.PlacementOpportunities"/>
+    <mapping class="com.tarkesh.entity.placementes"/>
+    <mapping class="com.tarkesh.entity.tracker"/>
+    <!--<mapping class="com.tarkesh.entity.trainer"/>-->
+    <mapping class="com.tarkesh.entity.Trainer"/>
+    <mapping class="com.tarkesh.entity.University"/>
+    <mapping class="com.tarkesh.entity.GetSetDivision"/>
+    <mapping class="com.tarkesh.entity.GetSetFinalAssessment"/>
+    <mapping class="com.tarkesh.entity.GetSetPlacementGraph"/>
+    <mapping class="com.tarkesh.entity.GetSetTopup"/>
+    <mapping class="com.tarkesh.entity.FinalAssessment"/>
+    <mapping class="com.tarkesh.entity.GetSetTrainer"/>
+    <mapping class="com.tarkesh.entity.BatchCodes"/>
+    <mapping class="com.tarkesh.entity.BatchSchedule"/>
+    <mapping class="com.tarkesh.entity.Version"/>
+  </session-factory>
+</hibernate-configuration>
